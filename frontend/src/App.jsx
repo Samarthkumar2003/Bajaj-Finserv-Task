@@ -23,7 +23,7 @@ function App() {
 
     try {
       const parsedInput = JSON.parse(jsonInput);
-      const res = await axios.post('http://localhost:3000/bfhl', parsedInput);
+      const res = await axios.post('https://bajaj-finserv-task-c14g.onrender.com/bfhl', parsedInput);
       setResponse(res.data);
     } catch (error) {
       setError('Invalid JSON input or Error fetching data');
