@@ -60,7 +60,7 @@ function App() {
         )}
         {selectedOptions.includes('highest_alphabet') && response.highest_alphabet && (
           <div>
-            <h3>Highest Alphabet:</h3>
+            <h3>Highest Lowercase Alphabet fallback to Any Alphabet:</h3>
             <p>{response.highest_alphabet}</p>
           </div>
         )}
@@ -86,7 +86,7 @@ function App() {
           <select multiple onChange={handleOptionChange} className="multi-select">
             <option value="alphabets">Alphabets</option>
             <option value="numbers">Numbers</option>
-            <option value="highest_alphabet">Highest Alphabet</option>
+            <option value="highest_alphabet">Highest Lowercase Alphabet fallback to Any Alphabet:</option>
           </select>
           {renderFilteredResponse()}
         </div>
